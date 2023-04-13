@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid_item1{
+            grid-area: dis;
+            text-align: right;
+        }
+        .grid_item2{
+            grid-area: one;
+        }
+        .grid_item3{
+            grid-area: two;
+        }
+        .grid_item4{
+            grid-area: three;
+        }
+        .grid_item5{
+            grid-area: four;
+        }
+        .grid_item6{
+            grid-area: five;
+        }
+        .grid_item7{
+            grid-area: six;
+        }
+        .grid_item8{
+            grid-area: seven;
+        }
+        .grid_item9{
+            grid-area: eight;
+        }
+        .grid_item10{
+            grid-area: nine;
+        }
+        .grid_item11{
+            grid-area: plus;
+        }
+        .grid_item12{
+            grid-area: minus;
+        }
+        .grid_item13{
+            grid-area: mul;
+        }
+        .grid_item14{
+            grid-area: div;
+        }
+        .grid_item15{
+            grid-area: eq;
+        }
+        .grid_item16{
+            grid-area: del;
+        }
+        .grid_item17{
+            grid-area: zero;
+        }
+        .grid_container{
+            width: 12%;
+            display: grid;
+            grid-template-areas: "dis dis dis dis"
+                                 "one two three plus"
+                                 "four five six minus"
+                                 "seven eight nine mul"
+                                 "del zero eq div";
+            gap: 10px;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        button{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="grid_item1" id="display">0</div>
+        <div class="grid_item17"><button onclick="zero()">0</button></div>
+        <div class="grid_item2"><button onclick="one()">1</button></div>
+        <div class="grid_item3"><button onclick="two()">2</button></div>
+        <div class="grid_item4"><button onclick="three()">3</button></div>
+        <div class="grid_item5"><button onclick="four()">4</button></div>
+        <div class="grid_item6"><button onclick="five()">5</button></div>
+        <div class="grid_item7"><button onclick="six()">6</button></div>
+        <div class="grid_item8"><button onclick="seven()">7</button></div>
+        <div class="grid_item9"><button onclick="eight()">8</button></div>
+        <div class="grid_item10"><button onclick="nine()">9</button></div>
+        <div class="grid_item11"><button onclick="plus()">+</button></div>
+        <div class="grid_item12"><button onclick="minus()">-</button></div>
+        <div class="grid_item13"><button onclick="mul()">x</button></div>
+        <div class="grid_item14"><button onclick="div()">:</button></div>
+        <div class="grid_item15"><button onclick="eq()">=</button></div>
+        <div class="grid_item16"><button onclick="del()">del</button></div>
+    </div>
+</body>
+<script>
+    var display=document.getElementById("display")
+    function zero(){
+        value = display.innerHTML;
+        if(value !=0){
+            display.innerHTML+=0;
+        }
+    }
+    function one(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=1;
+        }
+        else{
+        display.innerHTML+=1;
+        }
+    }
+    function two(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=2;
+        }
+        else{
+        display.innerHTML+=2;
+        }
+    }
+    function three(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=3;
+        }
+        else{
+        display.innerHTML+=3;
+        }
+    }
+    function four(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=4;
+        }
+        else{
+        display.innerHTML+=4;
+        }
+    }
+    function five(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=5;
+        }
+        else{
+        display.innerHTML+=5;
+        }
+    }
+    function six(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=6;
+        }
+        else{
+        display.innerHTML+=6;
+        }
+    }
+    function seven(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=7;
+        }
+        else{
+        display.innerHTML+=7;
+        }
+    }
+    function eight(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=8;
+        }
+        else{
+        display.innerHTML+=8;
+        }
+    }
+    function nine(){
+        value = display.innerHTML;
+        if(value ==0){
+            display.innerHTML=9;
+        }
+        else{
+        display.innerHTML+=9;
+        }
+    }
+    function del(){
+        value = value.slice(-1,-1)
+        display.innerHTML = value;
+    }
+</script>
+</html>
