@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .grid_item1{
+        .grid_item1 {
             grid-area: dis;
             text-align: right;
         }
-        .grid_item2{
+
+        .grid_item2 {
             grid-area: one;
         }
-        .grid_item3{
+
+        .grid_item3 {
             grid-area: two;
         }
-        .grid_item4{
+
+        .grid_item4 {
             grid-area: three;
         }
-        .grid_item5{
+
+        .grid_item5 {
             grid-area: four;
         }
-        .grid_item6{
+
+        .grid_item6 {
             grid-area: five;
         }
-        .grid_item7{
+
+        .grid_item7 {
             grid-area: six;
         }
-        .grid_item8{
+
+        .grid_item8 {
             grid-area: seven;
         }
-        .grid_item9{
+
+        .grid_item9 {
             grid-area: eight;
         }
-        .grid_item10{
+
+        .grid_item10 {
             grid-area: nine;
         }
-        .grid_item11{
+
+        .grid_item11 {
             grid-area: plus;
         }
-        .grid_item12{
+
+        .grid_item12 {
             grid-area: minus;
         }
-        .grid_item13{
+
+        .grid_item13 {
             grid-area: mul;
         }
-        .grid_item14{
+
+        .grid_item14 {
             grid-area: div;
         }
-        .grid_item15{
+
+        .grid_item15 {
             grid-area: eq;
         }
-        .grid_item16{
+
+        .grid_item16 {
             grid-area: del;
         }
-        .grid_item17{
+
+        .grid_item17 {
             grid-area: zero;
         }
-        .grid_container{
+
+        .grid_container {
             width: 12%;
             display: grid;
             grid-template-areas: "dis dis dis dis"
-                                 "one two three plus"
-                                 "four five six minus"
-                                 "seven eight nine mul"
-                                 "del zero eq div";
+                "one two three plus"
+                "four five six minus"
+                "seven eight nine mul"
+                "del zero eq div";
             gap: 10px;
             background-color: #f8f8f8;
             padding: 10px;
         }
-        button{
+
+        button {
             width: 100%;
         }
     </style>
 </head>
+
 <body>
     <div class="grid_container">
         <div class="grid_item1" id="display">0</div>
@@ -97,97 +117,120 @@
     </div>
 </body>
 <script>
-    var display=document.getElementById("display")
-    function zero(){
+    var display = document.getElementById("display")
+    function zero() {
         value = display.innerHTML;
-        if(value !=0){
-            display.innerHTML+=0;
+        if (value != 0) {
+            display.innerHTML += 0;
+            value = display.innerHTML;
         }
     }
-    function one(){
+    function one() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=1;
+        if (value == 0) {
+            display.innerHTML = 1;
         }
-        else{
-        display.innerHTML+=1;
+        else {
+            display.innerHTML += 1;
+            value = display.innerHTML;
         }
     }
-    function two(){
+    function two() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=2;
+        if (value == 0) {
+            display.innerHTML = 2;
         }
-        else{
-        display.innerHTML+=2;
+        else {
+            display.innerHTML += 2;
+            value = display.innerHTML;
+
         }
     }
-    function three(){
+    function three() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=3;
+        if (value == 0) {
+            display.innerHTML = 3;
         }
-        else{
-        display.innerHTML+=3;
+        else {
+            display.innerHTML += 3;
+            value = display.innerHTML;
+
         }
     }
-    function four(){
+    function four() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=4;
+        if (value == 0) {
+            display.innerHTML = 4;
         }
-        else{
-        display.innerHTML+=4;
+        else {
+            display.innerHTML += 4;
+            value = display.innerHTML;
+
         }
     }
-    function five(){
+    function five() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=5;
+        if (value == 0) {
+            display.innerHTML = 5;
         }
-        else{
-        display.innerHTML+=5;
+        else {
+            display.innerHTML += 5;
+            value = display.innerHTML;
+
         }
     }
-    function six(){
+    function six() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=6;
+        if (value == 0) {
+            display.innerHTML = 6;
         }
-        else{
-        display.innerHTML+=6;
+        else {
+            display.innerHTML += 6;
+            value = display.innerHTML;
+
         }
     }
-    function seven(){
+    function seven() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=7;
+        if (value == 0) {
+            display.innerHTML = 7;
         }
-        else{
-        display.innerHTML+=7;
+        else {
+            display.innerHTML += 7;
+            value = display.innerHTML;
+
         }
     }
-    function eight(){
+    function eight() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=8;
+        if (value == 0) {
+            display.innerHTML = 8;
         }
-        else{
-        display.innerHTML+=8;
+        else {
+            display.innerHTML += 8;
+            value = display.innerHTML;
+
         }
     }
-    function nine(){
+    function nine() {
         value = display.innerHTML;
-        if(value ==0){
-            display.innerHTML=9;
+        if (value == 0) {
+            display.innerHTML = 9;
         }
-        else{
-        display.innerHTML+=9;
+        else {
+            display.innerHTML += 9;
+            value = display.innerHTML;
+
         }
     }
-    function del(){
-        value = value.slice(-1,-1)
-        display.innerHTML = value;
+    function del() {
+        value = value.substr(0, value.length - 1);
+        if (value.length == 0) {
+            display.innerHTML = 0;
+        }
+        else
+            display.innerHTML = value;
     }
 </script>
+
 </html>
