@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="hour">
+        00 :
+    </span>
+
+    <span id="minute">
+        00 :
+    </span>
+
+    <span id="second">
+        00
+    </span>
+    <button onclick="starFunction()" id="start">start</button>
+    <button>stop</button>
+    <button>reset</button>
+</body>
+<script language="JavaScript">
+    debugger;
+
+    function starFunction() {
+        var start = document.getElementById("start");
+        var second = document.getElementById("second");
+        var minute = document.getElementById("minute");
+        var hour = document.getElementById("hour");
+        var i = 0;
+        var j = 0;
+        var e = 0;
+        setInterval(() => {
+            if (i < 9) {
+                second.innerHTML = '0' + (++i);
+            }
+            else if(i==59){
+                second.innerHTML = "00";
+                i=0;
+                if (j < 9) {
+                    minute.innerHTML = '0' + (++j)+":";
+                }
+                else if(j==59){
+                    minute.innerHTML = "00"+":";
+                    j=0;
+                    if (e < 9) {
+                        hour.innerHTML = '0' + (++e)+":";
+                    }
+                    else if(e==59){
+                        hour.innerHTML = "00"+":";
+                        e=0;
+                    }
+                    else if(e=>9 && e<58){
+                        hour.innerHTML = (++e)+":";
+                    }
+                }
+                else if(j=>9 && j<58){
+                    minute.innerHTML = (++j)+":";
+                }
+            }
+            else if(i=>9 && i<58){
+                second.innerHTML = (++i);
+            }
+        }, 1000)
+    }
+    debugger;
+</script>
+
+</html>
