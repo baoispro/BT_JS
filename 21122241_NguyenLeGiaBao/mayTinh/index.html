@@ -96,6 +96,7 @@
 </head>
 
 <body>
+    <h1 style="text-align: center;">Calculator</h1>
     <div class="grid_container">
         <div class="grid_item1" id="display">0</div>
         <div class="grid_item17"><button onclick="zero()">0</button></div>
@@ -115,9 +116,14 @@
         <div class="grid_item15"><button onclick="eq()">=</button></div>
         <div class="grid_item16"><button onclick="del()">del</button></div>
     </div>
+    <button onclick="xoaHet()">clearAll</button>
 </body>
 <script>
     var display = document.getElementById("display")
+    function xoaHet(){
+        value= 0
+        display.innerHTML =value
+    }
     function zero() {
         value = display.innerHTML;
         if (value != 0) {
@@ -230,6 +236,30 @@
         }
         else
             display.innerHTML = value;
+    }
+    function plus(){
+        display.innerHTML += "+";
+        value+="+"
+    }
+
+    function minus(){
+        display.innerHTML += "-";
+        value+="-"
+    }
+
+    function mul(){
+        display.innerHTML += "*";
+        value+="*"
+    }
+
+    function div(){
+        display.innerHTML += "/";
+        value+="/"
+    }
+
+    function eq(){
+        display.innerHTML=eval(value)
+
     }
 </script>
 
