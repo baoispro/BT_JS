@@ -20,22 +20,32 @@
     <span id="second">
         00
     </span>
-    <button onclick="starFunction()" id="start">start</button>
-    <button>stop</button>
-    <button>reset</button>
+    <button onclick="starFunction(true)" id="start">start</button>
+    <button onclick="stopFunction()" id="stop">stop</button>
+    <button onclick="stopFunction()" id="stop">reset</button>
 </body>
 <script language="JavaScript">
     debugger;
-
-    function starFunction() {
-        var start = document.getElementById("start");
+    var time=null;
+    var start = document.getElementById("start")
+    var i1 = 0;
+    var j1 = 0;
+    var e1 = 0;
+    var i 
+    var j 
+    var e
+    function starFunction(flag) {
+        
         var second = document.getElementById("second");
         var minute = document.getElementById("minute");
         var hour = document.getElementById("hour");
-        var i = 0;
-        var j = 0;
-        var e = 0;
-        setInterval(() => {
+        i = 0+i1;
+        j = 0+j1;
+        e = 0+e1;
+        if(flag){
+            start.innerHTML="start"
+        }
+        time = setInterval(() => {
             if (i < 9) {
                 second.innerHTML = '0' + (++i);
             }
@@ -67,6 +77,14 @@
                 second.innerHTML = (++i);
             }
         }, 1000)
+    }
+
+    function stopFunction(){
+        clearInterval(time)
+        start.innerHTML="continue"
+        i1=i;
+        j1=j;
+        e1=e;
     }
     debugger;
 </script>
