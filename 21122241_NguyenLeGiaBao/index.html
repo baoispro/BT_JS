@@ -22,7 +22,7 @@
     </span>
     <button onclick="starFunction(true)" id="start">start</button>
     <button onclick="stopFunction()" id="stop">stop</button>
-    <button onclick="stopFunction()" id="stop">reset</button>
+    <button onclick="resetFunction()" id="reset">reset</button>
 </body>
 <script language="JavaScript">
     debugger;
@@ -85,6 +85,16 @@
         i1=i;
         j1=j;
         e1=e;
+    }
+
+    function resetFunction(){
+        clearInterval(time)
+        i=0;
+        j=0;
+        e=0;
+        hour.innerHTML = "00"+":";
+        minute.innerHTML = "00"+":";
+        second.innerHTML = "00";
     }
     debugger;
 </script>
